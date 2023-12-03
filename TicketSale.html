@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Sale Frontend</title>
+</head>
+<body>
+
+<h1>Ticket Sale</h1>
+
+<!-- Purchase Ticket -->
+<div>
+  <label for="purchaseTicketId">Ticket ID:</label>
+  <input type="number" id="purchaseTicketId" />
+  <button onclick="purchaseTicket()">Purchase Ticket</button>
+</div>
+
+<!-- Offer Swap -->
+<div>
+  <label for="offerSwapId">Ticket ID to Swap:</label>
+  <input type="number" id="offerSwapId" />
+  <button onclick="offerSwap()">Offer Swap</button>
+</div>
+
+<!-- Accept Swap -->
+<div>
+  <label for="acceptSwapId">Ticket ID to Accept Swap:</label>
+  <input type="number" id="acceptSwapId" />
+  <button onclick="acceptSwap()">Accept Swap</button>
+</div>
+
+<!-- Get Ticket Number -->
+<div>
+  <button onclick="getTicketNumber()">Get Ticket Number</button>
+</div>
+
+<!-- Return Ticket -->
+<div>
+  <label for="returnTicketId">Ticket ID to Return:</label>
+  <input type="number" id="returnTicketId" />
+  <button onclick="returnTicket()">Return Ticket</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+<script>
+
+const contractAddress = 'CONTRACT_ADDRESS'; // To replace with your deployed contract address
+const abi = [CONTRACT_ABI]; // To replace with your contract ABI
+
+const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545'); // Use local or provider URL
+const contract = new web3.eth.Contract(abi, contractAddress);
+
+function purchaseTicket() {
+  const ticketId = document.getElementById('purchaseTicketId').value;
+  
+  // Call your contract function for buying ticket here
+  
+}
+
+function offerSwap() {
+  const ticketId = document.getElementById('offerSwapId').value;
+  
+  // Call your contract function for offering swap here
+
+}
+
+function acceptSwap() {
+  const ticketId = document.getElementById('acceptSwapId').value;
+  
+  // Call your contract function for accepting swap here
+  
+}
+
+function getTicketNumber() {
+  // Call your contract function for getting ticket number here
+  
+}
+
+function returnTicket() {
+  const ticketId = document.getElementById('returnTicketId').value;
+  
+  // Call your contract function for returning ticket here
+  
+}
+
+</script>
+
+</body>
+</html>
